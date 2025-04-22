@@ -595,7 +595,7 @@ Layer Window::belongsToLayer() const
         return BelowLayer;
     }
     if (isActiveFullScreen()) {
-        return ActiveLayer;
+        return NormalLayer;
     }
     if (keepAbove()) {
         return AboveLayer;
@@ -814,8 +814,8 @@ QStringList Window::desktopIds() const
     std::transform(desks.constBegin(), desks.constEnd(),
                    std::back_inserter(ids),
                    [](const VirtualDesktop *vd) {
-                       return vd->id();
-                   });
+        return vd->id();
+    });
     return ids;
 }
 
