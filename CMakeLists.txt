@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # clangd/LSP support
+
 set(PROJECT_VERSION "6.3.80") # Handled by release scripts
 project(KWin VERSION ${PROJECT_VERSION})
 
